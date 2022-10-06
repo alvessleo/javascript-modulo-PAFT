@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="overlay">
+            <div class="intro">
+                    <h1>Módulo de <img src="assets/js.svg"></h1>
+                    <p>PROGRAMA DE ATRAÇÃO E FORMAÇÃO DE TALENTOS</p>
+                    <button class="myBtn" onclick="fadeOut()">Explorar</button>
+            </div>
+        </div>
+
+        <div class="overlay-2"></div>
+
+        <div class="content">
+            <h1>Exercicios do MARK</h1>
+            <p class="data">Exercicios serao postados aqui em formato de card, acompanhado de uma interface para interação</p>
+        </div>
+    </div>
+
+    <script>
+
+        function fadeOut() {
+   
+        TweenMax.to(".myBtn", 1, {
+             y: -100,
+             opacity: 0
+        });
+   
+   
+        TweenMax.from(".overlay", 2, {
+             ease: Power2.easeInOut
+        });
+   
+        TweenMax.to(".overlay", 2, {
+             delay: 0,
+             top: "-110%",
+             ease: Expo.easeInOut
+        });
+   
+        TweenMax.to(".overlay-2", 1, {
+             delay: 0.9,
+             top: "-110%",
+             ease: Expo.easeInOut
+        });
+   
+        TweenMax.from(".content", 1, {
+             delay: 0.9,
+             opacity: 0,
+             ease: Power2.easeInOut
+        });
+   
+        TweenMax.to(".content", 1, {
+             opacity: 1,
+             y: -300,
+             delay: 1,
+             ease: Power2.easeInOut
+        });
+   
+        }
+   
+       </script>
+</body>
+</html>
