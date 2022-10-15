@@ -10,7 +10,3 @@ Formula =
 1,𝑠𝑒 𝑛 = 1
 𝑓𝑖𝑏 𝑛 −1 +𝑓𝑖𝑏(𝑛 −2),𝑠𝑒 𝑛 > 1
 */
-function no_recursiva_fibonnaci(index){
-    let start = 1;
-    for
-}

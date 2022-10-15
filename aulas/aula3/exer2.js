@@ -7,6 +7,13 @@ console.log(menos(10)); //Imprime -10
 console.log(menos(5,2)); //Imprime 3
 */
 
-function menos(x, y){
-    console.log(arguments.length)
+function menos(x, y) {
+    if (y === undefined) {
+        return -x;
+    } else {
+        return x - y;
+    }
 }
+
+console.log(menos(10));
+console.log(menos(5,2));
