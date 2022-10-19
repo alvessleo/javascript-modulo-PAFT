@@ -10,3 +10,15 @@ Formula =
 1,𝑠𝑒 𝑛 = 1
 𝑓𝑖𝑏 𝑛 −1 +𝑓𝑖𝑏(𝑛 −2),𝑠𝑒 𝑛 > 1
 */
+
+
+const fibonacci = num => {
+
+    if(num < 2) {
+    return num
+    }
+    
+    return fibonacci(num - 1) + fibonacci(num - 2)
+  }
+  
+  console.log(fibonacci(7));
