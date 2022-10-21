@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Placar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qbj7kce.css">
 </head>
 <body>
     <section class="container">
         <h1>Placar</h1>
-        <p class="pontuação"><span id="jogador1">0</span>x<span id="jogador2">0</span></p>
-        <p>Use os botões para marcar o placar</p>
+        <p class="developer">Developed by Leonardo Alves</p>
+        <div class="winner"></div>
+        <p class="pontuacao"><span id="jogador1">0</span>x<span id="jogador2">0</span></p>
+        <p class="orientation">Use os botões para marcar o placar</p>
         <div class="max-pontuation">
             <p>Partida de</p><select id="pontuacao-maxima"></select>
         </div>
         <div class="add-points">
-            <button class="point-for-player1">+1 Jogador 1</button>
-            <button class="point-for-player2">+1 Jogador 2</button>
+            <button class="point-for-player1" id="btn1">+1 Jogador 1</button>
+            <button class="point-for-player2" id="btn2">+1 Jogador 2</button>
         </div>
         <button id="reset">Reset</button>
 

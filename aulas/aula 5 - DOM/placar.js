@@ -4,17 +4,23 @@ const player2 = document.querySelector('#jogador2');
 
 const buttonPlayer1 = document.querySelector('.point-for-player1');
 
+const winner = document.querySelector('.winner');
+
+const newWinner = document.createElement('div');
+newWinner.style.color = 'green';
+
 let count1 = 0;
 buttonPlayer1.onclick = () => {
+    console.log(count1)
     console.log(maxValue)
     count1++
+    console.log(count1)
     player1.innerText = count1;
     if(count1 == maxValue){
-        alert('player 1 wins');
-        player1.innerText = 0
-        player2.innerText = 0
-        count1 = 0
-        count2 = 0
+        newWinner.innerText = 'Jogador 1 Ganhou';
+        winner.appendChild(newWinner);
+        document.getElementById("btn1").disabled = true;
+        document.getElementById("btn2").disabled = true;
     }
 }
 
@@ -25,11 +31,10 @@ buttonPlayer2.onclick = () => {
     count2++
     player2.innerText = count2;
     if(count2 == maxValue){
-        alert('player 2 wins');
-        player1.innerText = 0
-        player2.innerText = 0
-        count1 = 0
-        count2 = 0
+        newWinner.innerText = 'Jogador 2 Ganhou';
+        winner.appendChild(newWinner);
+        document.getElementById("btn1").disabled = true;
+        document.getElementById("btn2").disabled = true;
     }
 }
 
@@ -56,8 +61,6 @@ selector.addEventListener('change', function(){
 })
 
 
-
-
 // Button reset 
 const reset = document.querySelector('#reset');
 reset.onclick = () => {
@@ -65,4 +68,7 @@ reset.onclick = () => {
     player2.innerText = 0
     count1 = 0
     count2 = 0
+    document.getElementById("btn1").disabled = false;
+    document.getElementById("btn2").disabled = false;
+    winner.removeChild(newWinner);
 }
